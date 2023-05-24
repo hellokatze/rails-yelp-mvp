@@ -7,6 +7,10 @@
 
 <h2>Reviews for this restaurant:</h2>
 <% @restaurant.reviews.each do |review| %>
-  <p><%= review.rating %></p>
+  <div class="star">
+    <% review.rating.times do %>
+      <p>⭐️</p>
+    <% end %>
+  </div>
   <p><%= review.content %></p>
 <% end %>
